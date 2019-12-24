@@ -7,11 +7,11 @@ class QoveryCli < Formula
 
   if OS.mac?
     url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "285c18169efa99e3ad75d0611c9fae569a65de31fb9a6767b3c460e5d2473a5b"
+    sha256 "0a9503a3becf9c2e08ec7cedcf5f8258fedf783f074d5e5332b2967dda7054cb"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "807af9da07ccbcd023938876e248e362d5f4385e9965ace6455f9d44b3381fdb"
+      sha256 "4c2879e5f9fe9306821f22e770ebe286e80470d0d13f2d70664f92d958fecb8f"
     end
   end
 
