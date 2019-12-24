@@ -1,2 +1,3 @@
-# qovery-cli-brew
-Brew tap for qovery cli
+# Homebrew Qovery CLI
+
+Formula for Mac OS brew.
