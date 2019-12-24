@@ -6,12 +6,12 @@ class QoveryCli < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "0a9503a3becf9c2e08ec7cedcf5f8258fedf783f074d5e5332b2967dda7054cb"
+    url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_darwin_amd64.tar.gz"
+    sha256 "67e5205267906932b45c5e246cb381fdeadc6f50bd80305761e9b08edbdc413b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4c2879e5f9fe9306821f22e770ebe286e80470d0d13f2d70664f92d958fecb8f"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.1/qovery-cli_0.1_linux_amd64.tar.gz"
+      sha256 "cc8cd4d07e71baf5a297efa3b26bd6a8d49707e632bdc1b43ef772a5a78b4149"
     end
   end
 
