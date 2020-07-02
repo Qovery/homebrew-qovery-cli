@@ -2,16 +2,16 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.30.5"
+  version "0.30.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.30.5/qovery-cli_0.30.5_darwin_amd64.tar.gz"
-    sha256 "30fb83fcbf570761f4ab7b339f3cf6e5b110cfecc264245f6656e13049d75b0c"
+    url "https://github.com/Qovery/qovery-cli/releases/download/v0.30.6/qovery-cli_0.30.6_darwin_amd64.tar.gz"
+    sha256 "4c5ea64f4b65f5fa541da66133e291b502dc033d6b25a9d0814bbab6a7712382"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.30.5/qovery-cli_0.30.5_linux_amd64.tar.gz"
-      sha256 "2bed73296b926c33b6827dd203919e754577afa351539dbdfb8f51f09dbe6e09"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.30.6/qovery-cli_0.30.6_linux_amd64.tar.gz"
+      sha256 "764e5d01bcf791e50f2899ecc259cfcd62d479a2f5a4eff52b5207dc866c8b38"
     end
   end
 
