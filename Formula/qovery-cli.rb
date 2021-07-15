@@ -5,24 +5,29 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.33.22"
+  version "0.34.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.33.22/qovery-cli_0.33.22_darwin_amd64.tar.gz"
-    sha256 "6e18af0501987018b7926eaee3c759059cd79a072d23becde9da37456ef13a8e"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.34.0/qovery-cli_0.34.0_darwin_amd64.tar.gz"
+      sha256 "563a1d00f4d7f8fef85f1b6a4f897f0c8c97ec293fe716b3583da7f7ef2282c5"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.34.0/qovery-cli_0.34.0_darwin_arm64.tar.gz"
+      sha256 "7bdc618a1ec80402f923e77a891a1280a8f95c305a2a3a51860508eed38a39ea"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.33.22/qovery-cli_0.33.22_darwin_arm64.tar.gz"
-    sha256 "2a1a8f0f7ea6c42cde451ec5793f6b455d1ecf9f5450496a24e28f2011ca52eb"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.33.22/qovery-cli_0.33.22_linux_amd64.tar.gz"
-    sha256 "b35cb53580021f46e90b3514238e14f36fa1a48b8bcc860ed00e3e7124875b40"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Qovery/qovery-cli/releases/download/v0.33.22/qovery-cli_0.33.22_linux_arm64.tar.gz"
-    sha256 "971518d6e3bf851900f97a57ec6d5132546eb2ddcee724128d2e34089a5ba0a6"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.34.0/qovery-cli_0.34.0_linux_amd64.tar.gz"
+      sha256 "ca8e1e5cc34c9d69229ae9254dadcc11617b86d32d33be6d37aff4b9d971fbc3"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.34.0/qovery-cli_0.34.0_linux_arm64.tar.gz"
+      sha256 "e8a6f8197a7a24af50e153ef432b9d718d81e1e55bbca21c33dfca3bdbce1bc1"
+    end
   end
 
   def install
