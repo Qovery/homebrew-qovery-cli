@@ -5,28 +5,28 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.35.8"
+  version "0.35.9"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.8/qovery-cli_0.35.8_darwin_amd64.tar.gz"
-      sha256 "fecf4023128e74431fa6e07c2ff269a921ea427d3a22e0ddae2f64c199b5982c"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_darwin_amd64.tar.gz"
+      sha256 "8c87089fd5719e7dc227adee3c7d7cd65a19a235bbd2b96876ffc2391e654da1"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.8/qovery-cli_0.35.8_darwin_arm64.tar.gz"
-      sha256 "6137306e81ed6518b44b82aafdc20c1ac562e7766eb30161d312b03bd04abe8f"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_darwin_arm64.tar.gz"
+      sha256 "b8e808b0508f38c9c94504eb39c99a824bf18f0b17f0343082a426362224bf98"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.8/qovery-cli_0.35.8_linux_amd64.tar.gz"
-      sha256 "f650b7006ccf896a0a56338e9aadf762c4e4649c32835cfe34d83f5e9cf1edee"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.8/qovery-cli_0.35.8_linux_arm64.tar.gz"
-      sha256 "6812dc24020d8fcd76ff2502bfc7023e91ebf89df9e56ba990db811c48f7b55e"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_linux_arm64.tar.gz"
+      sha256 "40d036daebc3289ba4039e1ebc8e641581e66c6322fbefe1a8fd76f1c55828bc"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_linux_amd64.tar.gz"
+      sha256 "43242b3c87f92f9d11d7c8b1be60af6e8ade7b146ae5c0c7409e55837814ae94"
     end
   end
 
