@@ -6,7 +6,6 @@ class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
   version "0.35.9"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

@@ -6,7 +6,6 @@ class Qovery < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
   version "0.33.12"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/Qovery/qovery-cli/releases/download/v0.33.12/qovery-cli_0.33.12_darwin_amd64.tar.gz"
