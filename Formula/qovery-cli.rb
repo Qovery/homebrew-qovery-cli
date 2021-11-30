@@ -5,32 +5,43 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.35.9"
-  bottle :unneeded
+  version "0.35.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_darwin_amd64.tar.gz"
-      sha256 "8c87089fd5719e7dc227adee3c7d7cd65a19a235bbd2b96876ffc2391e654da1"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.10/qovery-cli_0.35.10_darwin_amd64.tar.gz"
+      sha256 "e5532347de237fe9309c7225a3519f5c4214ee1c24e0ba8a9b0a2dbe548df595"
+
+      def install
+        bin.install "qovery"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_darwin_arm64.tar.gz"
-      sha256 "b8e808b0508f38c9c94504eb39c99a824bf18f0b17f0343082a426362224bf98"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.10/qovery-cli_0.35.10_darwin_arm64.tar.gz"
+      sha256 "9d04bfb98d0ab5bfd81eb3956cb6f0429c0b9ac3904e71b23f6386029494a53b"
+
+      def install
+        bin.install "qovery"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_linux_arm64.tar.gz"
-      sha256 "40d036daebc3289ba4039e1ebc8e641581e66c6322fbefe1a8fd76f1c55828bc"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.10/qovery-cli_0.35.10_linux_arm64.tar.gz"
+      sha256 "098fd126e309a897bc878151e239dce5dca7d7aee32dde7edebd4b6223ede317"
+
+      def install
+        bin.install "qovery"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.9/qovery-cli_0.35.9_linux_amd64.tar.gz"
-      sha256 "43242b3c87f92f9d11d7c8b1be60af6e8ade7b146ae5c0c7409e55837814ae94"
-    end
-  end
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.35.10/qovery-cli_0.35.10_linux_amd64.tar.gz"
+      sha256 "20ac92b7bdc9b2bca90411d222196b633287e09b6f6cf46132a1777e40882ffd"
 
-  def install
-    bin.install "qovery"
+      def install
+        bin.install "qovery"
+      end
+    end
   end
 end
