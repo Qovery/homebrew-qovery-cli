@@ -5,20 +5,20 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.54.0"
+  version "0.55.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.54.0/qovery-cli_0.54.0_darwin_arm64.tar.gz"
-      sha256 "fee4f4263e1c62435d4747283d831c9822d4d62e2cb3193caded9ae0ba9199b7"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.55.0/qovery-cli_0.55.0_darwin_arm64.tar.gz"
+      sha256 "d529a1f4286ee09477da6a0f22e5928daedc9e1c3c8de40319a38c389f09baf2"
 
       def install
         bin.install "qovery"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.54.0/qovery-cli_0.54.0_darwin_amd64.tar.gz"
-      sha256 "b19e597324b23bc614fa15a72d35b49093b3a7b8b86d0769dbc1812d1522793e"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.55.0/qovery-cli_0.55.0_darwin_amd64.tar.gz"
+      sha256 "82c6eb4399f6b3f7152cab2f207b9c696e455113e0c50a0c6ce15c952848bc92"
 
       def install
         bin.install "qovery"
@@ -28,16 +28,16 @@ class QoveryCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.54.0/qovery-cli_0.54.0_linux_amd64.tar.gz"
-      sha256 "65bec723d0862b7759a16f7ef0924d87912883c811a17701cd408486cf8250e1"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.55.0/qovery-cli_0.55.0_linux_amd64.tar.gz"
+      sha256 "a8509100aa32dc4dbf037c6046924fc5d64947ff96751dca7d99c75497f86cbe"
 
       def install
         bin.install "qovery"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.54.0/qovery-cli_0.54.0_linux_arm64.tar.gz"
-      sha256 "7dc9276cce8d33645f840031ad26f5b4c761d0b8e5950a6b1370169b51640fa2"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.55.0/qovery-cli_0.55.0_linux_arm64.tar.gz"
+      sha256 "61407dbbcf9e3987a4bbc7c57061bd8af254906935df755f127d2f1de4083ab6"
 
       def install
         bin.install "qovery"
