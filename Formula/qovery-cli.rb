@@ -5,20 +5,20 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "0.74.0"
+  version "0.74.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.0/qovery-cli_0.74.0_darwin_arm64.tar.gz"
-      sha256 "5674a2951b05aed9b68ac0ed15635670779e11e341bf08150bbc26075cd962dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.2/qovery-cli_0.74.2_darwin_amd64.tar.gz"
+      sha256 "5371b75bdbfee747c4f863f188e3bf2a7aaa24d5250c6296c3084828a62cf5d1"
 
       def install
         bin.install "qovery"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.0/qovery-cli_0.74.0_darwin_amd64.tar.gz"
-      sha256 "74013c75d5abc7a61a1e7282afd185ab1ac984add90da16b9130b1ce4c29bf11"
+    if Hardware::CPU.arm?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.2/qovery-cli_0.74.2_darwin_arm64.tar.gz"
+      sha256 "16b4449633fc1597dfaf9e226a258a4e2ef8a9317047d211bc0177be6f4c65d1"
 
       def install
         bin.install "qovery"
@@ -27,17 +27,17 @@ class QoveryCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.0/qovery-cli_0.74.0_linux_amd64.tar.gz"
-      sha256 "ea030ed49eec2af843f0dbc36017417e4e9ab588557d2dc7f63823ca73c431b0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.2/qovery-cli_0.74.2_linux_arm64.tar.gz"
+      sha256 "97ec8901c52b29ce50f301f89c749dafdf9a94f528b07ea0f65eb2f8fdecd4f3"
 
       def install
         bin.install "qovery"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.0/qovery-cli_0.74.0_linux_arm64.tar.gz"
-      sha256 "16c9c720a972baab4530461bfb5d23b40806ef7c840001d1353ca8e57e85a1a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/Qovery/qovery-cli/releases/download/v0.74.2/qovery-cli_0.74.2_linux_amd64.tar.gz"
+      sha256 "c2e360a580cf5dbf52682073b059ae145bbc16d3eb2e481d94cc6f3ccc8c4cf9"
 
       def install
         bin.install "qovery"
