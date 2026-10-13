@@ -5,20 +5,20 @@
 class QoveryCli < Formula
   desc "Deploy modern application in seconds"
   homepage "https://docs.qovery.com"
-  version "1.173.0"
+  version "1.173.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.0/qovery-cli_1.173.0_darwin_amd64.tar.gz"
-      sha256 "1c1a9216053d6aaf118159c5fa167e81a1a21757be5cf3f43689d56890cc9c4e"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.1/qovery-cli_1.173.1_darwin_amd64.tar.gz"
+      sha256 "3e2e161cb18c8280a421c67af68da9d8d7ee6a088d82a8efaf66785d99ccdfba"
 
       define_method(:install) do
         bin.install "qovery"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.0/qovery-cli_1.173.0_darwin_arm64.tar.gz"
-      sha256 "9d7b44bb7b4ff7d94e0c5660bec6c9857e065b351e5a54d4dbb7a62831a14f1d"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.1/qovery-cli_1.173.1_darwin_arm64.tar.gz"
+      sha256 "ea4eb6844257b520a44aa128b4acf5f15735e76e9aa2b2c914d4db79566ade24"
 
       define_method(:install) do
         bin.install "qovery"
@@ -28,15 +28,15 @@ class QoveryCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.0/qovery-cli_1.173.0_linux_amd64.tar.gz"
-      sha256 "3f34824ca7b832a5083420dba43c22956a82857f544085f320ad0de0a1e1086e"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.1/qovery-cli_1.173.1_linux_amd64.tar.gz"
+      sha256 "eb4f85f4d8ec429ad5c39f6f4bde4a85ba67417b35d05a9f18fa9cb33ee05786"
       define_method(:install) do
         bin.install "qovery"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.0/qovery-cli_1.173.0_linux_arm64.tar.gz"
-      sha256 "2cc52e01232a1eff91ebfc7550e3be6af5b795974285c6533f758a6221740d52"
+      url "https://github.com/Qovery/qovery-cli/releases/download/v1.173.1/qovery-cli_1.173.1_linux_arm64.tar.gz"
+      sha256 "925f333713bdf7f1d91cd0d2d9c2f28d3ea178a0393728a0e7a2b9247b327ca9"
       define_method(:install) do
         bin.install "qovery"
       end
